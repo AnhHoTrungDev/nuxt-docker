@@ -1,2 +1,5 @@
-docker rm -vf $(docker ps -aq) || true && docker rmi -f $(docker images -aq) || true && docker-compose up --build --detach
+docker rm -vf "nuxt-portfolio"|| true && \
+docker rm -vf "nginx-portfolio"|| true && \
+docker system prune -af || true && \
+docker-compose up --build --detach
 #bash <filename>.sh

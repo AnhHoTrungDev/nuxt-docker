@@ -6,3 +6,9 @@ docker run --name some-mongo  -v /my/own/datadir:/data/db -d -e MONGO_INITDB_ROO
 ```bash
 bash run.sh
 ```
+
+## note
+# Delete all container and delete all image
+```bash
+docker rm -vf $(docker ps -aq) || true && docker rmi -f $(docker images -aq)
+```
